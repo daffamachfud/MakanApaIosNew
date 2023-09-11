@@ -7,7 +7,7 @@ workflows:
       vars:
           XCODE_PROJECT: "MakanApaIos/MakanApaIos.xcodeproj" # Isikan nama project Anda.
           XCODE_WORKSPACE : "MakanApaIos/MakanApaIos.xcworkspace"
-          XCODE_SCHEME: "MakanApaIos/MakanApaIos" # Isikan nama scheme project Anda.
+          XCODE_SCHEME: "MakanApaIos" # Isikan nama scheme project Anda.
     scripts:
       - name: Run tests
         script: |
