@@ -9,6 +9,7 @@ import SwiftUI
 import RealmSwift
 import Core
 import Restaurant
+import Favorite
 
 let injection = Injection()
 

@@ -8,12 +8,17 @@
 import SwiftUI
 import Core
 import Restaurant
+import Favorite
 
 struct ContentView: View {
-@EnvironmentObject var homePresenter: GetListPresenter<String, RestaurantModel, Interactor<String, [RestaurantModel], GetRestaurantsRepository<GetRestaurantsLocaleDataSource,
+@EnvironmentObject var homePresenter:
+GetListPresenter<String, RestaurantModel,
+Interactor<String, [RestaurantModel], GetRestaurantsRepository<GetRestaurantsLocaleDataSource,
 GetRestaurantsRemoteDataSource, RestaurantsTransformer<RestaurantTransformer>>>>
 
-@EnvironmentObject var favoritePresenter: GetListPresenter<String, RestaurantModel, Interactor<String, [RestaurantModel], GetFavoriteRestaurantsRepository<GetFavoriteRestaurantsLocaleDataSource,
+@EnvironmentObject var favoritePresenter:
+GetListPresenter<String, RestaurantModel,
+Interactor<String, [RestaurantModel], GetFavoriteRestaurantsRepository<GetFavoriteRestaurantsLocaleDataSource,
 RestaurantsTransformer<RestaurantTransformer>>>>
 
     var body: some View {

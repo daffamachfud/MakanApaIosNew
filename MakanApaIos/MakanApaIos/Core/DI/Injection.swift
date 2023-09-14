@@ -10,6 +10,7 @@ import UIKit
 import Restaurant
 import SwiftUI
 import RealmSwift
+import Favorite
 
 final class Injection: NSObject {
     private let realm = try? Realm()
@@ -42,7 +43,6 @@ final class Injection: NSObject {
         localeDataSource: locale,
         remoteDataSource: remote,
         mapper: mapper)
-      
         if let interactor = Interactor(repository: repository) as? U {
                 return interactor
             } else {

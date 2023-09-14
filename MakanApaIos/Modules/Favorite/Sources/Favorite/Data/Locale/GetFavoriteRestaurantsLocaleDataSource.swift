@@ -9,6 +9,7 @@ import Core
 import Combine
 import RealmSwift
 import Foundation
+import Restaurant
 
 public struct GetFavoriteRestaurantsLocaleDataSource: LocaleDataSource {
 
@@ -38,7 +39,7 @@ public struct GetFavoriteRestaurantsLocaleDataSource: LocaleDataSource {
   }
 
   public func get(id: String) -> AnyPublisher<RestaurantEntity, Error> {
-
+      debugPrint("Iyah kesini")
     return Future<RestaurantEntity, Error> { completion in
       if let restaurantEntity = {
         self.realm.objects(RestaurantEntity.self).filter("id = '\(id)'")
@@ -56,7 +57,7 @@ public struct GetFavoriteRestaurantsLocaleDataSource: LocaleDataSource {
       }
     }.eraseToAnyPublisher()
   }
-    
+
     public func update(id: String, entity: RestaurantEntity) -> AnyPublisher<Bool, Error> {
         fatalError()
     }

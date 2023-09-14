@@ -75,7 +75,7 @@ extension HomeView {
         }
     }
 
-    var emptyRestaurant: some View{
+    var emptyRestaurant: some View {
         VStack {
             Image("img_empty")
                 .resizable()
@@ -87,7 +87,7 @@ extension HomeView {
         }
     }
 
-    var errorResponse: some View{
+    var errorResponse: some View {
         VStack {
             Image("img_empty")
                 .resizable()

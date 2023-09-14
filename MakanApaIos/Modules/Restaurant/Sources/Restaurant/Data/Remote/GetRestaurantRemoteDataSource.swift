@@ -17,7 +17,7 @@ public struct GetRestaurantRemoteDataSource: DataSource {
     public init (endpoint: String) {
         self.endpoint = endpoint
     }
-    
+
     public func execute(request: String?) -> AnyPublisher<RestaurantResponse, Error> {
         return Future<RestaurantResponse, Error> { completion in
 

@@ -9,9 +9,9 @@ import Core
 import Combine
 
 public struct GetRestaurantRepository<
-    RestaurantLocaleDataSource: LocaleDataSource,
-    RemoteDataSource: DataSource,
-    Transformer: Mapper
+RestaurantLocaleDataSource: LocaleDataSource,
+RemoteDataSource: DataSource,
+Transformer: Mapper
 >: Repository where
 RestaurantLocaleDataSource.Request == String,
 RestaurantLocaleDataSource.Response == RestaurantEntity,
@@ -20,16 +20,15 @@ RemoteDataSource.Response == RestaurantResponse,
 Transformer.Request == String,
 Transformer.Response == RestaurantResponse,
 Transformer.Entity == RestaurantEntity,
-Transformer.Domain == RestaurantModel
-{
-    
+Transformer.Domain == RestaurantModel {
+
     public typealias Request = String
     public typealias Response = RestaurantModel
-    
+
     private let localeDataSource: RestaurantLocaleDataSource
     private let remoteDataSource: RemoteDataSource
     private let mapper: Transformer
-    
+
     public init(
         localeDataSource: RestaurantLocaleDataSource,
         remoteDataSource: RemoteDataSource,
@@ -39,10 +38,9 @@ Transformer.Domain == RestaurantModel
         self.remoteDataSource = remoteDataSource
         self.mapper = mapper
     }
-    
+
     public func execute(request: String?) -> AnyPublisher<RestaurantModel, Error> {
         guard let request = request else { fatalError("Request cannot be empty") }
-        
         return self.localeDataSource.get(id: request)
             .flatMap { result -> AnyPublisher<RestaurantModel, Error> in
                 if result.id.isEmpty {

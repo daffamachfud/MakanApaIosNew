@@ -8,16 +8,15 @@
 import Core
 import RealmSwift
 
-public struct RestaurantTransformer: Mapper
-{
-    
+public struct RestaurantTransformer: Mapper {
+
     public typealias Request = String
     public typealias Response = RestaurantResponse
     public typealias Entity = RestaurantEntity
     public typealias Domain = RestaurantModel
-    
+
     public init() {}
-    
+
     public func transformResponseToEntity(request: String?, response: RestaurantResponse) -> RestaurantEntity {
         let restaurantEntity = RestaurantEntity()
         restaurantEntity.id = response.id
@@ -28,7 +27,7 @@ public struct RestaurantTransformer: Mapper
         restaurantEntity.rating = response.rating
         return restaurantEntity
     }
-    
+
     public func transformEntityToDomain(entity: RestaurantEntity) -> RestaurantModel {
         return RestaurantModel(
             id: entity.id,

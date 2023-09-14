@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14700E732AB30C6E0020E63F /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 14700E722AB30C6E0020E63F /* Core */; };
 		1478B7F72AA18BDD009B339E /* MakanApaIosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1478B7F62AA18BDD009B339E /* MakanApaIosApp.swift */; };
 		1478B7F92AA18BDD009B339E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1478B7F82AA18BDD009B339E /* ContentView.swift */; };
 		1478B7FB2AA18BDF009B339E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1478B7FA2AA18BDF009B339E /* Assets.xcassets */; };
@@ -23,11 +24,11 @@
 		1478B8472AA4CF8A009B339E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1478B8462AA4CF8A009B339E /* Alamofire */; };
 		1478B84A2AA4DA97009B339E /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 1478B8492AA4DA97009B339E /* Realm */; };
 		1478B84C2AA4DA97009B339E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1478B84B2AA4DA97009B339E /* RealmSwift */; };
+		14B981732AB2C30100C849B0 /* Favorite in Frameworks */ = {isa = PBXBuildFile; productRef = 14B981722AB2C30100C849B0 /* Favorite */; };
 		14BD07242AA9CA0A001526F4 /* MakanApaIosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BD07232AA9CA0A001526F4 /* MakanApaIosTests.swift */; };
 		14C90BC02AA595E000005CA5 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 14C90BBF2AA595E000005CA5 /* CachedAsyncImage */; };
 		14C90BC92AA5E19700005CA5 /* FavoriteRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C90BC82AA5E19700005CA5 /* FavoriteRouter.swift */; };
 		14C90BCC2AA5E74900005CA5 /* CustomIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C90BCB2AA5E74900005CA5 /* CustomIcon.swift */; };
-		14E38A372AAA2E7A00CA46C0 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 14E38A362AAA2E7A00CA46C0 /* Core */; };
 		14E38A392AAA2E7A00CA46C0 /* Restaurant in Frameworks */ = {isa = PBXBuildFile; productRef = 14E38A382AAA2E7A00CA46C0 /* Restaurant */; };
 		14E38A3B2AAA339700CA46C0 /* FavoriteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E38A3A2AAA339700CA46C0 /* FavoriteRow.swift */; };
 /* End PBXBuildFile section */
@@ -57,9 +58,9 @@
 		1478B82A2AA1DB9A009B339E /* APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
 		1478B82D2AA1DD98009B339E /* CustomeError+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomeError+Ext.swift"; sourceTree = "<group>"; };
 		1478B8352AA1E5FF009B339E /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		14B981712AB2B3F000C849B0 /* Favorite */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Favorite; path = Modules/Favorite; sourceTree = "<group>"; };
 		14BD07212AA9CA0A001526F4 /* MakanApaIosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MakanApaIosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14BD07232AA9CA0A001526F4 /* MakanApaIosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakanApaIosTests.swift; sourceTree = "<group>"; };
-		14BD072C2AA9D118001526F4 /* Core */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Core; path = Modules/Core; sourceTree = "<group>"; };
 		14BD072D2AA9D712001526F4 /* Restaurant */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Restaurant; path = Modules/Restaurant; sourceTree = "<group>"; };
 		14C90BC82AA5E19700005CA5 /* FavoriteRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRouter.swift; sourceTree = "<group>"; };
 		14C90BCB2AA5E74900005CA5 /* CustomIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIcon.swift; sourceTree = "<group>"; };
@@ -76,8 +77,9 @@
 				14C90BC02AA595E000005CA5 /* CachedAsyncImage in Frameworks */,
 				1478B84A2AA4DA97009B339E /* Realm in Frameworks */,
 				14E38A392AAA2E7A00CA46C0 /* Restaurant in Frameworks */,
-				14E38A372AAA2E7A00CA46C0 /* Core in Frameworks */,
 				1478B8472AA4CF8A009B339E /* Alamofire in Frameworks */,
+				14700E732AB30C6E0020E63F /* Core in Frameworks */,
+				14B981732AB2C30100C849B0 /* Favorite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,8 +267,8 @@
 		14BD072B2AA9D118001526F4 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				14BD072C2AA9D118001526F4 /* Core */,
 				14BD072D2AA9D712001526F4 /* Restaurant */,
+				14B981712AB2B3F000C849B0 /* Favorite */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -313,7 +315,6 @@
 				1478B7EF2AA18BDD009B339E /* Sources */,
 				1478B7F02AA18BDD009B339E /* Frameworks */,
 				1478B7F12AA18BDD009B339E /* Resources */,
-				1478B8102AA1909C009B339E /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -325,8 +326,9 @@
 				1478B8492AA4DA97009B339E /* Realm */,
 				1478B84B2AA4DA97009B339E /* RealmSwift */,
 				14C90BBF2AA595E000005CA5 /* CachedAsyncImage */,
-				14E38A362AAA2E7A00CA46C0 /* Core */,
 				14E38A382AAA2E7A00CA46C0 /* Restaurant */,
+				14B981722AB2C30100C849B0 /* Favorite */,
+				14700E722AB30C6E0020E63F /* Core */,
 			);
 			productName = MakanApaIos;
 			productReference = 1478B7F32AA18BDD009B339E /* MakanApaIos.app */;
@@ -382,6 +384,7 @@
 				1478B8452AA4CF8A009B339E /* XCRemoteSwiftPackageReference "Alamofire" */,
 				1478B8482AA4DA97009B339E /* XCRemoteSwiftPackageReference "realm-swift" */,
 				14C90BBE2AA595E000005CA5 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+				14700E712AB30C6E0020E63F /* XCRemoteSwiftPackageReference "Core" */,
 			);
 			productRefGroup = 1478B7F42AA18BDD009B339E /* Products */;
 			projectDirPath = "";
@@ -411,27 +414,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		1478B8102AA1909C009B339E /* Run Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1478B7EF2AA18BDD009B339E /* Sources */ = {
@@ -717,6 +699,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		14700E712AB30C6E0020E63F /* XCRemoteSwiftPackageReference "Core" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/daffamachfud/Core.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		1478B8452AA4CF8A009B339E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -744,6 +734,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		14700E722AB30C6E0020E63F /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 14700E712AB30C6E0020E63F /* XCRemoteSwiftPackageReference "Core" */;
+			productName = Core;
+		};
 		1478B8462AA4CF8A009B339E /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1478B8452AA4CF8A009B339E /* XCRemoteSwiftPackageReference "Alamofire" */;
@@ -759,14 +754,14 @@
 			package = 1478B8482AA4DA97009B339E /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
 		};
+		14B981722AB2C30100C849B0 /* Favorite */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Favorite;
+		};
 		14C90BBF2AA595E000005CA5 /* CachedAsyncImage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 14C90BBE2AA595E000005CA5 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
 			productName = CachedAsyncImage;
-		};
-		14E38A362AAA2E7A00CA46C0 /* Core */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Core;
 		};
 		14E38A382AAA2E7A00CA46C0 /* Restaurant */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -8,12 +8,17 @@
 import SwiftUI
 import Core
 import Restaurant
+import Favorite
 
 struct FavoriteView: View {
 
 @State private var showingAlert = false
-@ObservedObject var presenter: GetListPresenter<String, RestaurantModel,
-Interactor<String, [RestaurantModel], GetFavoriteRestaurantsRepository<GetFavoriteRestaurantsLocaleDataSource, RestaurantsTransformer<RestaurantTransformer>>>>
+@ObservedObject var presenter:
+GetListPresenter<String, RestaurantModel, Interactor<String,
+[RestaurantModel],
+GetFavoriteRestaurantsRepository<
+GetFavoriteRestaurantsLocaleDataSource,
+RestaurantsTransformer<RestaurantTransformer>>>>
 
     var body: some View {
         ZStack {

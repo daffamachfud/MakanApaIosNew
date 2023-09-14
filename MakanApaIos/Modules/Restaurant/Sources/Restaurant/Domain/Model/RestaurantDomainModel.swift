@@ -14,8 +14,8 @@ public struct RestaurantModel: Equatable, Identifiable {
     public let rating: Double
     public var favorite: Bool = false
 
-public init(id: String, name: String, description: String, pictureID: String,
- city: String, rating: Double, favorite: Bool) {
+    public init(id: String, name: String, description: String, pictureID: String,
+                city: String, rating: Double, favorite: Bool) {
         self.id = id
         self.name = name
         self.description = description
