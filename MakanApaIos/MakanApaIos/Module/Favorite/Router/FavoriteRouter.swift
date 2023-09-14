@@ -9,6 +9,7 @@ import SwiftUI
 import Core
 import Restaurant
 import Favorite
+import Detail
 
 class FavoriteRouter {
 
@@ -30,10 +31,9 @@ class FavoriteRouter {
                 RestaurantTransformer>
         > = Injection.init().provideUpdateFavorite()
 
-        let presenter = RestaurantPresenter(restaurantUseCase: useCase)
-        let favoritePresenter = FavoritePresenter(favoriteUseCase: favoriteUseCase)
+        let presenter = DetailPresenter(restaurantUseCase: useCase, favoriteUseCase: favoriteUseCase)
 
-        return DetailView(presenter: presenter, favPresenter: favoritePresenter, restaurant: restaurant)
+        return DetailView(presenter: presenter, restaurant: restaurant)
     }
 
 }

@@ -10,18 +10,15 @@ import CachedAsyncImage
 import Restaurant
 import Core
 import Favorite
+import Detail
 
 struct DetailView: View {
     @State private var showingAlert = false
 
-@ObservedObject var presenter:
-RestaurantPresenter<Interactor<String, RestaurantModel,
-GetRestaurantRepository<GetRestaurantsLocaleDataSource, GetRestaurantRemoteDataSource, RestaurantTransformer>>>
-
-@ObservedObject var favPresenter:
-FavoritePresenter<Interactor<String, RestaurantModel,
-UpdateFavoriteRestaurantRepository<GetFavoriteRestaurantsLocaleDataSource, RestaurantTransformer>>>
-
+    @ObservedObject var presenter: DetailPresenter<Interactor<String, RestaurantModel,
+    GetRestaurantRepository<GetRestaurantsLocaleDataSource, GetRestaurantRemoteDataSource, RestaurantTransformer>>,
+    Interactor<String, RestaurantModel, UpdateFavoriteRestaurantRepository<GetFavoriteRestaurantsLocaleDataSource,
+    RestaurantTransformer>>>
     var restaurant: RestaurantModel
 
     var body: some View {
@@ -98,21 +95,20 @@ extension DetailView {
                 Spacer()
                 Spacer()
                 Spacer()
-                let favItem = favPresenter.item ?? presenter.item
-
-                if favItem?.favorite == true {
+               
+                if presenter.item?.favorite == true {
                     CustomIcon(
                         imageName: "heart.fill",
                         title: "Favorited"
                     ).onTapGesture {
-                        self.favPresenter.updateFavoriteRestaurant(request: restaurant.id)
+                        self.presenter.updateFavoriteRestaurant(request: restaurant.id)
                     }
                 } else {
                     CustomIcon(
                         imageName: "heart",
                         title: "Favorite"
                     ).onTapGesture {
-                        self.favPresenter.updateFavoriteRestaurant(request: restaurant.id)
+                        self.presenter.updateFavoriteRestaurant(request: restaurant.id)
                     }
                 }
             }

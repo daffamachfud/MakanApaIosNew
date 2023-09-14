@@ -10,6 +10,7 @@ import RealmSwift
 import Core
 import Restaurant
 import Favorite
+import Detail
 
 let injection = Injection()
 
@@ -34,7 +35,7 @@ let favoriteUseCase: Interactor<
 struct MakanApaIosApp: SwiftUI.App {
     let homePresenter = GetListPresenter(useCase: restaurantUseCase)
     let favoritePresenter = GetListPresenter(useCase: favoriteUseCase)
-
+   
     var body: some Scene {
         WindowGroup {
             ContentView()

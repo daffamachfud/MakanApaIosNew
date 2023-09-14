@@ -39,7 +39,6 @@ public struct GetFavoriteRestaurantsLocaleDataSource: LocaleDataSource {
   }
 
   public func get(id: String) -> AnyPublisher<RestaurantEntity, Error> {
-      debugPrint("Iyah kesini")
     return Future<RestaurantEntity, Error> { completion in
       if let restaurantEntity = {
         self.realm.objects(RestaurantEntity.self).filter("id = '\(id)'")

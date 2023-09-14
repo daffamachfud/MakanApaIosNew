@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1428AF012AB3113A00F119BE /* Detail in Frameworks */ = {isa = PBXBuildFile; productRef = 1428AF002AB3113A00F119BE /* Detail */; };
 		14700E732AB30C6E0020E63F /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 14700E722AB30C6E0020E63F /* Core */; };
 		1478B7F72AA18BDD009B339E /* MakanApaIosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1478B7F62AA18BDD009B339E /* MakanApaIosApp.swift */; };
 		1478B7F92AA18BDD009B339E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1478B7F82AA18BDD009B339E /* ContentView.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1428AEFF2AB3112F00F119BE /* Detail */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Detail; path = Modules/Detail; sourceTree = "<group>"; };
 		1478B7F32AA18BDD009B339E /* MakanApaIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakanApaIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1478B7F62AA18BDD009B339E /* MakanApaIosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakanApaIosApp.swift; sourceTree = "<group>"; };
 		1478B7F82AA18BDD009B339E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1478B84C2AA4DA97009B339E /* RealmSwift in Frameworks */,
+				1428AF012AB3113A00F119BE /* Detail in Frameworks */,
 				14C90BC02AA595E000005CA5 /* CachedAsyncImage in Frameworks */,
 				1478B84A2AA4DA97009B339E /* Realm in Frameworks */,
 				14E38A392AAA2E7A00CA46C0 /* Restaurant in Frameworks */,
@@ -269,6 +272,7 @@
 			children = (
 				14BD072D2AA9D712001526F4 /* Restaurant */,
 				14B981712AB2B3F000C849B0 /* Favorite */,
+				1428AEFF2AB3112F00F119BE /* Detail */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -329,6 +333,7 @@
 				14E38A382AAA2E7A00CA46C0 /* Restaurant */,
 				14B981722AB2C30100C849B0 /* Favorite */,
 				14700E722AB30C6E0020E63F /* Core */,
+				1428AF002AB3113A00F119BE /* Detail */,
 			);
 			productName = MakanApaIos;
 			productReference = 1478B7F32AA18BDD009B339E /* MakanApaIos.app */;
@@ -734,6 +739,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1428AF002AB3113A00F119BE /* Detail */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Detail;
+		};
 		14700E722AB30C6E0020E63F /* Core */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 14700E712AB30C6E0020E63F /* XCRemoteSwiftPackageReference "Core" */;

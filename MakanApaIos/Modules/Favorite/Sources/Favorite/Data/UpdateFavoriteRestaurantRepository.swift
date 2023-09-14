@@ -34,7 +34,6 @@ RestaurantLocaleDataSource.Response == RestaurantEntity,
   }
 
   public func execute(request: String?) -> AnyPublisher<RestaurantModel, Error> {
-      debugPrint("Update inih")
     return self.localeDataSource.get(id: request ?? "")
       .map { self.mapper.transformEntityToDomain(entity: $0) }
       .eraseToAnyPublisher()
